@@ -17,7 +17,7 @@ const authenticatedUser = (username,password)=>{ //returns boolean
 };
     
     // Only registered users can login
-    regd_users.post("/login", (req, res)) => {
+    regd_users.post("/login", (req, res) => {
       const username = req.body.username;
       const password = req.body.password;
     
@@ -36,7 +36,7 @@ const authenticatedUser = (username,password)=>{ //returns boolean
       } else {
         return res.status(208).json({ message: "Invalid Login. Check username and password" });
       }
-}
+    });
 
 //only registered users can login
 regd_users.post("/login", (req,res) => {
